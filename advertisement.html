@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Create an Ad</title>
+    <style>
+        .center{
+            text-align: center;
+        }
+        body{
+            background-image: url("img/pexels-photo-261949.jpeg");
+            background-color: aliceblue;
+            opacity: .75;
+        }
+        .notOpac{
+            margin-bottom: 2em;
+            opacity: 1;
+        }
+
+
+    </style>
+</head>
+<body>
+<header>
+    <h1 class="top center" >Ad-Maker</h1>
+    <div>
+        <h3 class="top center">Enter Ad information down below!</h3>
+    </div>
+</header>
+<main>
+    <form action="http://requestbin.fullcontact.com/1460rp01" class="center notOpac">
+        <label for="title">Title your Ad here:</label>
+        <div>
+        <input type="text" id="title" name="title" autofocus>
+        </div>
+        <label for="price">Cost of Product:</label>
+        <div>
+            <input type="text" id="price" name="price">$
+        </div>
+        <label for="description">Description of product to be advertised:</label>
+        <div>
+            <textarea name="description" id="description" cols="80" rows="20"></textarea>
+        </div>
+        <button>Advertise</button>
+    </form>
+</main>
+
+</body>
+</html>
