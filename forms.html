@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        .veridian{
+            background-image: url("../codeup-web-exercises/img/grid.png");
+            opacity: .7;
+        }
+        .back{
+            background-image: url("img/veridian_back.jpeg");
+        }
+
+
+    </style>
+    <title>Register With Us!</title>
+</head>
+<body class="back">
+<header class="veridian">
+    <h1>Veridian Dynamics Customer Survey</h1>
+</header>
+<form action="http://requestbin.fullcontact.com/18soqf11" method="post">
+    <div>
+        <label for="email">Email</label>
+        <input type="text" name="email" id="email" placeholder="Enter email here">
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" placeholder="password here">
+    </div>
+    <div>
+        <label for="bio">Please enter a short description about yourself</label>
+    </div>
+        <textarea name="bio" id="bio" cols="30" rows="10"></textarea>
+    <div>
+        <h3>How did you hear about us?</h3>
+        <input type="radio" name="hear1" value="billboard">Billboard
+        <input type="radio" name="hear2" value="radio advertisement">Radio Ad
+        <input type="radio" name="hear3" value="internet advertisement">Internet Ad
+        <input type="radio" name="hear4" value="other">Other
+    </div>
+    <div>
+        <h3>What Web browser do you use?</h3>
+        <select name="browser_preference">
+            <option value="chrome">Chrome</option>
+            <option value="firefox">Firefox</option>
+            <option value="opera">Opera</option>
+        </select>
+    </div>
+    <div>
+    <button>Submit</button>
+    </div>
+</form>
+
+</body>
+</html>
