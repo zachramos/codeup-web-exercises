@@ -1,3 +1,67 @@
-.fancy-header{
+header{
+color: purple;
+text-align: center;
+background-image: url("../img/skyscraper.png")
+
+}
+
+h2 {
+    color:purple;
+    text-decoration: underline;
+}
+
+body {
+    background-color: aliceblue;
+    font-family: 'vollkorn', serif;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+li {
+    text-align: match-parent;
+}
+
+table, th, td {
+    border: 1px solid black;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+th {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+a:link {
+    color: blue;
+}
+a:visited {
+    color: red;
+}
+a:hover {
+    color:aliceblue;
+}
+a:active {
     color: purple;
+}
+
+.section1 {
+    position:relative;
+    border: 3px solid black;
+    width: 400px;
+    text-align: center;
+    margin: auto;
+}
+
+.section2 {
+    margin: auto;
+    text-align: center;
+}
+
+.section3 {
+    margin: auto;
+    text-align: center;
+    position: center;
 }
