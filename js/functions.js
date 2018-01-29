@@ -56,7 +56,7 @@ var random = Math.floor((Math.random() * 3) + 1);
  * number)
  */
 function istwo(num) {
-    return num % 2 === 0;
+    return num === 2;
 }
 
 console.log(istwo(random));
