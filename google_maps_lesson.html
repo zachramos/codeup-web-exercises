@@ -3,8 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <title>google maps lesson</title>
+    <style>
+        #mapCanvas{
+            height: 600px;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
+
+<div id="mapCanvas"></div>
+
+
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDHgf8BD29wHKxMf89kwnEsHeHmA9HNlCQ"></script>
+<script>
+"use strict";
+var map = new google.maps.Map(document.getElementById("mapCanvas"), mapOptions);
+
+var geocoder = new google.maps.Geocoder();
+
+geocoder.geocode({ "address": address }, function(results, status) {
+    if (status == google.maps.GeocoderStatus.OK) {
+
+        // Recenter the map over the address
+        map.setCenter(results[0].geometry.location);
+    } else {
+
+        // Show an error message with the status if our request fails
+        alert("Geocoding was not successful - STATUS: " + status);
+    }
+});
+
+
+
+
+
+</script>
 
 </body>
 </html>
