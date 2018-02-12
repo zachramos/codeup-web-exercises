@@ -51,6 +51,28 @@
 
     $("h1, p, li").css("background-color", "lightblue");
 
+    $("h1, p, li").css("background-color", "lightblue");
+
+    var contents = $("h3").html();
+
+    var headerColor = $("#greeting");
+
+    headerColor.click(function(){
+        $(this).css("background-color", "red");
+    });
+
+    $("p").dblclick(function(){
+        $(this).css("font-size", "18px");
+    });
+
+    $("li").hover(function(){
+        $(this).css("color", "red");
+
+    }, function(){
+        $(this).css("color", "black");
+
+    });
+
 
 
 </script>
