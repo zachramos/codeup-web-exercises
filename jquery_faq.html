@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jquery FAQ</title>
+    <style>
+        .invisible {
+            display: none;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<div id="register" class="invisible">
+    <h2>Register here</h2>
+    <a href="#">Register</a>
+</div>
+
+<div class="message">
+    <h1>Would you like to sign up for our newsletter?</h1>
+    <span class="message" id="hideTitle">X</span>
+</div>
+
+<h1>National Parks FAQ</h1>
+
+
+<dl>
+    <dt>Who is the director of the National Park Service?</dt>
+        <dd>Michael T. Reynolds is the acting director of the National Park Service.
+            Learn more about past directors of the National Park Service.</dd>
+    <dt>What government agency oversees the National Park Service?</dt>
+        <dd>The National Park Service is a bureau of the Department of the Interior. Directly overseeing its operation is the Department's Assistant Secretary for Fish, Wildlife and Parks.
+        </dd>
+    <dt>How many employees are in the National Park Service?</dt>
+        <dd>Permanent, temporary, and seasonal: Approximately 22,000 diverse professionals</dd>
+    <dt>How old is the National Park System?</dt>
+        <dd>The National Park Service was created by an act signed by President Woodrow Wilson on August 25, 1916. Yellowstone National Park was established by an act signed by President Ulysses S. Grant on March 1, 1872, as the nation's first national park. View the National Park System timeline.</dd>
+    <dt>What is the origin of the National Park Service arrowhead?</dt>
+        <dd>The arrowhead was authorized as the official National Park Service emblem by the Secretary of the Interior on July 20, 1951. The components of the arrowhead may have been inspired by key attributes of the National Park System, with the sequoia tree and bison representing vegetation and wildlife, the mountains and water representing scenic and recreational values, and the arrowhead itself representing historical and archeological values. Read more about the history of the arrowhead and other elements of NPS visual design.</dd>
+    <dt>How many areas are in the National Park System?</dt>
+        <dd>The system includes 417 areas covering more than 84 million acres in every state, the District of Columbia, American Samoa, Guam, Puerto Rico, and the Virgin Islands. These areas include national parks, monuments, battlefields, military parks, historical parks, historic sites, lakeshores, seashores, recreation areas, scenic rivers and trails, and the White House. Learn more about national park designations. See the complete list of National Park Service units and affiliated areas (145KB PDF) by type and number.</dd>
+    <dt>How many people visit the national parks?</dt>
+        <dd>Total recreation visitors to the national parks in 2016: 330,971,689</dd>
+    <dt>How do I obtain a park entrance pass?</dt>
+        <dd>Only 118 of your 417 park sites charge entrance fees. You can obtain park entrance passes by visiting a park site that charges an entrance fee. Entrance fee sites have passes available; we recommend calling a park prior to your visit. (See the park search to locate a specific park.) There are a number of entrance passes available, including park-specific passes as well as passes that offer entrance to more than 2,000 federal recreation sites in addition to the national parks (Annual, Military, Senior, 4th Grade, Access, and Volunteer passes). Learn more about the America the Beautiful - The National Parks and Federal Recreational Lands Pass</dd>
+    <dt>Where can I find a park map?</dt>
+        <dd>Where can I find a park map?</dd>
+    <dt>How do I reserve a tour in a park?</dt>
+        <dd>You can book some park tours through Recreation.gov such as WWII Valor in the Pacific (Pearl Harbor), many Mammoth Cave National Park cave tours, Independence National Historical Park tours, and more. Not all parks participate in this reservation service. For more information on tours offered at a specific park, please see the park search.</dd>
+</dl>
+
+<a href="#" id="link">Answers</a>
+
+<div>
+    <h3>yosemite</h3>
+    <ul class="nationalParks facts">
+        <li>fact</li>
+        <li>fact</li>
+        <li>fact</li>
+        <li>fact</li>
+    </ul>
+    <h3>yellowstone</h3>
+    <ul class="nationalParks facts">
+        <li>fact</li>
+        <li>fact</li>
+        <li>fact</li>
+        <li>fact</li>
+    </ul>
+    <h3>Redwood</h3>
+    <ul class="nationalParks facts">
+        <li>fact</li>
+        <li>fact</li>
+        <li>fact</li>
+        <li>fact</li>
+    </ul>
+
+    <button id="btn">Press</button>
+</div>
+
+
+
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous">
+</script>
+<script>
+    "use strict";
+    $("dd").addClass("invisible");
+//    $("dt").addClass("highlighted");
+
+    //$(".invisible").css("display", "none");
+
+    $('#link').click(function(event) {
+        event.preventDefault();
+        $("dd").toggleClass("invisible");
+    });
+
+    $("dt").click(function(event){
+        $("dt").css("background-color", "transparent");
+        $(this).css("background-color", "rgba(255, 255, 0, 0.54)");
+    });
+
+//    $("#btn").click(function(event){
+//        event.preventDefault();
+//        $(".nationalParks").children().last().css("background-color", "yellow");
+//    });
+
+    $("#btn").on("click", highlightAllLastListItem);
+
+    function highlightAllLastListItem(){
+        $("ul").each(highlightLastListItem);
+    }
+
+    function highlightLastListItem(){
+        $(this).children().last().css("background-color", "yellow");
+    }
+
+
+    $("h3").on("click", makeAllListItemsBold);
+
+    function makeAllListItemsBold(){
+        $(this).next().children().css("font-weight", "bold");
+    }
+
+    $("li").on("click", makeFirstSiblingBlue);
+    function makeFirstSiblingBlue(){
+        $(this).parent().children().first().css("color", "blue");
+    }
+
+    $("#hideTitle").on("click", hideTheMessage);
+
+    function hideTheMessage(){
+        $(".message").hide();
+    }
+
+    var facts = $(".facts");
+
+    facts.hide();
+
+    facts.prev().click(function(){
+        $(this).next().slideToggle();
+    });
+
+    setTimeout(function(){
+        $("#register").fadeIn(1000);
+    }, 8000);
+
+
+
+
+</script>
+
+</body>
+</html>
