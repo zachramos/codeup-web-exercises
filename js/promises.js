@@ -25,7 +25,7 @@ function wait (delay) {
 function getCommit (username){
 
 let url = `https://api.github.com/users/${username}/repos`;
-return fetch(url, {headers: {'Authorization': 'token 14bdbd267fe81d2dbf9bbb479a6f902e988226bc'}})
+return fetch(url, {headers: {'Authorization': 'token }})
 .then((response) => response.json() )
     .then((repos) => repos.map((repo) => repo.pushed_at));
 
