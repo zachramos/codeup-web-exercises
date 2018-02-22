@@ -1,0 +1,22 @@
+ul{
+    list-style: none inside;
+    margin: 0;
+
+}
+
+body {
+    background-image: url("../img/weather.png");
+}
+
+.allContent{
+    margin-top: 10%;
+}
+
+.forecast-box{
+    border: solid gray 1px;
+}
+
+#map{
+    height: 500px;
+    width: 100%;
+}
